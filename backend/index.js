@@ -2,12 +2,20 @@ const express = require('express');
 const res = require('express/lib/response');
 const app = express();
 const PORT = 9000;
+const cors = require('cors'); // Importe o módulo cors
 // https://pastebin.mozilla.org/BEMJaeCT - todo o código
+
+
+// Habilitar o uso do middleware de CORS
+app.use(cors());
+
 
 // app.listen(3000, ()=> console.log("Deu baum!"));
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
 
 // app.get('/', (req, res)=> {
 //     res.send("Bem-vindo(a) à nossa primeira aplicação. ola")
@@ -18,6 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 // app.get('/j', (req, res)=> {
 //     res.json({dados})
 // });
+
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`)
