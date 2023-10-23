@@ -1,7 +1,7 @@
 const express = require('express');
 const res = require('express/lib/response');
 const app = express();
-const PORT = 3000;
+const PORT = 9000;
 // https://pastebin.mozilla.org/BEMJaeCT - todo o código
 
 // app.listen(3000, ()=> console.log("Deu baum!"));
